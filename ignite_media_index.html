@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ignite Media</title>
+  <meta name="description" content="Ignite Media is an independent, solo-operated media platform operating digital attention across social platforms." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0B0F0E;
+      --text: #E5E7EB;
+      --muted: #9CA3AF;
+      --green: #22C55E;
+      --glass: rgba(255,255,255,0.06);
+      --border: rgba(255,255,255,0.12);
+    }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{
+      font-family:Inter,system-ui,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.7;
+    }
+    body::before{
+      content:"";
+      position:fixed;
+      inset:-50%;
+      background:radial-gradient(circle at 30% 10%, rgba(34,197,94,0.15), transparent 60%);
+      pointer-events:none;
+      z-index:0;
+    }
+    .container{
+      max-width:1100px;
+      margin:auto;
+      padding:0 20px;
+      position:relative;
+      z-index:1;
+    }
+    section{padding:100px 0;}
+    h1{font-size:clamp(3rem,7vw,5rem);font-weight:500;letter-spacing:-0.03em;}
+    h2{font-size:2.4rem;font-weight:500;margin-bottom:20px;}
+    p{color:var(--muted);font-size:1.1rem;max-width:720px;}
+    .glass{
+      background:var(--glass);
+      backdrop-filter:blur(18px) saturate(120%);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:28px;
+    }
+    .hero{min-height:100vh;display:flex;align-items:center;}
+    .buttons{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap;}
+    .btn{
+      padding:14px 28px;
+      border-radius:12px;
+      text-decoration:none;
+      font-weight:500;
+    }
+    .btn-primary{background:var(--green);color:#0B0F0E;}
+    .btn-secondary{border:1px solid var(--border);color:var(--text);}
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:24px;
+      margin-top:40px;
+    }
+    footer{
+      padding:60px 0 40px;
+      border-top:1px solid var(--border);
+      text-align:center;
+      color:var(--muted);
+      font-size:0.9rem;
+    }
+    @media(max-width:768px){section{padding:70px 0;}}
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container">
+    <h1>IGNITE MEDIA</h1>
+    <p><strong>Operating digital attention across social platforms</strong></p>
+    <p>An independent, solo-operated media platform managing and building multiple digital content properties.</p>
+    <div class="buttons">
+      <a href="#platforms" class="btn btn-primary">View Platforms</a>
+      <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>What is Ignite Media</h2>
+    <p>Ignite Media is an independent digital media platform operated by a solo creator. It focuses on building, managing, and organizing content properties across multiple social platforms.</p>
+    <p>The platform is designed around distribution systems, consistency, and platform-native formats — not hype or short-term growth tactics.</p>
+  </div>
+</section>
+
+<section id="platforms">
+  <div class="container">
+    <h2>Platforms Operated Under Ignite Media</h2>
+    <div class="grid">
+      <div class="glass"><h3>Politics / News / Motivation</h3><p>Instagram · ~20K followers</p></div>
+      <div class="glass"><h3>Finance News</h3><p>Instagram · ~2K average views</p></div>
+      <div class="glass"><h3>Cricket / Sports</h3><p>Instagram · ~2K average views</p></div>
+    </div>
+    <p style="margin-top:24px;font-size:0.95rem;">Metrics shown are organic and platform-reported.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>What the Platform Works On</h2>
+    <p>Content distribution and page operations, short-form editing support, organic growth systems, selective PR visibility, and creator–brand introductions when aligned.</p>
+    <p style="font-size:0.95rem;margin-top:12px;">Offerings evolve naturally as the platform grows.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container glass">
+    <h2>Founder</h2>
+    <p>Founder & Operator, Ignite Media.<br><br>
+    Solo creator with hands-on experience building and operating faceless social media pages across multiple niches. Currently focused on short-form distribution systems and transitioning toward long-form video platforms.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2>Connect</h2>
+    <p>Email: contact@ignitemedia.example<br>Instagram: @ignitemedia</p>
+    <p style="font-size:0.95rem;margin-top:12px;">Ignite Media is currently in a build phase.</p>
+  </div>
+</section>
+
+<footer>
+  © 2026 Ignite Media · Independent Digital Platform
+</footer>
+
+</body>
+</html>
