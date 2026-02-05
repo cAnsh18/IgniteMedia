@@ -1,196 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ignite Media</title>
-  <meta name="description" content="Ignite Media is an independent, solo-operated digital media platform managing multiple social content properties." />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ignite Media</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --bg: #0B0F0E;
-      --text: #E5E7EB;
-      --muted: #9CA3AF;
-      --green: #22C55E;
-      --glass: rgba(255,255,255,0.06);
-      --border: rgba(255,255,255,0.12);
-    }
+<style>
+:root{
+  --bg:#050806;
+  --green:#22ff77;
+  --glass:rgba(255,255,255,0.08);
+  --border:rgba(255,255,255,0.18);
+  --text:#eafff3;
+  --muted:#b7dccc;
+}
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+*{margin:0;padding:0;box-sizing:border-box}
 
-    body {
-      font-family: Inter, system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-    }
+body{
+  font-family:Inter,system-ui,sans-serif;
+  background:
+    radial-gradient(900px 600px at 20% -10%, rgba(34,255,119,.55), transparent 60%),
+    radial-gradient(800px 500px at 80% 10%, rgba(34,255,119,.35), transparent 60%),
+    linear-gradient(180deg,#050806,#020403);
+  color:var(--text);
+  overflow-x:hidden;
+}
 
-    body::before {
-      content: "";
-      position: fixed;
-      inset: -50%;
-      background: radial-gradient(circle at 30% 10%, rgba(34,197,94,0.15), transparent 60%);
-      z-index: 0;
-      pointer-events: none;
-    }
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:0 24px;
+}
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 0 20px;
-      position: relative;
-      z-index: 1;
-    }
+section{padding:110px 0}
 
-    section {
-      padding: 100px 0;
-    }
+.glass{
+  background:var(--glass);
+  backdrop-filter:blur(22px) saturate(150%);
+  border:1px solid var(--border);
+  border-radius:22px;
+}
 
-    h1 {
-      font-size: clamp(3rem, 7vw, 5rem);
-      font-weight: 500;
-      letter-spacing: -0.03em;
-    }
+/* HEADER */
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  padding:20px 24px;
+  z-index:10;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+header h1{
+  font-size:1.4rem;
+  font-weight:800;
+  letter-spacing:.08em;
+}
+.menu-btn{
+  font-size:1.6rem;
+  cursor:pointer;
+}
 
-    h2 {
-      font-size: 2.4rem;
-      font-weight: 500;
-      margin-bottom: 20px;
-    }
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+}
+.hero h2{
+  font-size:clamp(3.8rem,8vw,6rem);
+  font-weight:900;
+  letter-spacing:-.04em;
+}
+.hero p{
+  margin-top:16px;
+  font-size:1.3rem;
+  color:var(--muted);
+}
 
-    p {
-      color: var(--muted);
-      font-size: 1.1rem;
-      max-width: 720px;
-    }
+/* MOTIVE */
+.motive{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:60px;
+}
+.motive h3{
+  font-size:1.8rem;
+  font-weight:800;
+  margin-bottom:12px;
+}
+.motive p{
+  font-size:1.1rem;
+  color:var(--muted);
+}
 
-    .glass {
-      background: var(--glass);
-      backdrop-filter: blur(18px) saturate(120%);
-      -webkit-backdrop-filter: blur(18px) saturate(120%);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 28px;
-    }
+/* PLATFORM GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:28px;
+}
+.card{
+  padding:36px;
+}
+.card h4{
+  font-size:1.4rem;
+  font-weight:700;
+}
+.card p{
+  margin-top:10px;
+  color:var(--muted);
+}
 
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-    }
+/* SERVICES */
+.services .card{
+  height:170px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.services span{
+  font-size:2rem;
+  margin-bottom:10px;
+}
 
-    .hero p {
-      margin-top: 20px;
-      max-width: 600px;
-    }
+/* CONTACT + FOUNDER */
+.last{
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  gap:36px;
+}
+.contact-col{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+.contact-box{
+  padding:22px 26px;
+  cursor:pointer;
+}
+.contact-box:hover{
+  border-color:var(--green);
+}
+.founder{
+  padding:42px;
+  text-align:center;
+}
+.founder img{
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  object-fit:cover;
+  margin-bottom:18px;
+}
 
-    .buttons {
-      margin-top: 40px;
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
+/* FOOTER */
+footer{
+  padding:60px 0;
+  text-align:center;
+  color:var(--muted);
+  font-size:.9rem;
+}
 
-    .btn {
-      padding: 14px 28px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: 0.25s ease;
-    }
-
-    .btn-primary {
-      background: var(--green);
-      color: #0B0F0E;
-    }
-
-    .btn-primary:hover {
-      box-shadow: 0 8px 30px rgba(34,197,94,0.35);
-      transform: translateY(-2px);
-    }
-
-    .btn-secondary {
-      border: 1px solid var(--border);
-      color: var(--text);
-      background: transparent;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
-      gap: 24px;
-      margin-top: 40px;
-    }
-
-    footer {
-      padding: 60px 0 40px;
-      border-top: 1px solid var(--border);
-      text-align: center;
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-  </style>
+@media(max-width:900px){
+  .last{grid-template-columns:1fr}
+}
+</style>
 </head>
 
 <body>
 
-  <section class="hero">
-    <div class="container">
-      <h1>IGNITE MEDIA</h1>
-      <p>Operating digital attention across social platforms.</p>
-      <div class="buttons">
-        <a href="#platforms" class="btn btn-primary">View Platforms</a>
-        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+<header>
+  <h1>IGNITE MEDIA</h1>
+  <div class="menu-btn">☰</div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h2>IGNITE MEDIA</h2>
+    <p>Operating digital attention</p>
+  </div>
+</section>
+
+<section>
+  <div class="container motive">
+    <div>
+      <h3>OUR MOTIVE</h3>
+      <p>Build attention systems, not noise.</p>
+    </div>
+    <div>
+      <h3>OUR TARGET</h3>
+      <p>Creators, brands, and platforms that value trust.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h3 style="font-size:2rem;font-weight:800;margin-bottom:40px;">PART OF IGNITE MEDIA</h3>
+    <div class="grid">
+      <div class="glass card"><h4>CivicX.in</h4><p>Instagram · 22K+ followers</p></div>
+      <div class="glass card"><h4>MarketFlow</h4><p>Finance · 50K+ monthly views</p></div>
+      <div class="glass card"><h4>CricSpark</h4><p>Cricket · 50K+ monthly views</p></div>
+      <div class="glass card"><h4>IgniteSelf</h4><p>YouTube · 50K+ monthly views</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container services">
+    <h3 style="font-size:2rem;font-weight:800;margin-bottom:40px;">OUR SERVICES</h3>
+    <div class="grid">
+      <div class="glass card"><span>📢</span>PR</div>
+      <div class="glass card"><span>🤝</span>Brand Collaboration</div>
+      <div class="glass card"><span>🗂️</span>Management</div>
+      <div class="glass card"><span>📈</span>Marketing</div>
+      <div class="glass card"><span>⭐</span>Influencer</div>
+      <div class="glass card"><span>🎬</span>Video Editing</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container last">
+    <div class="contact-col">
+      <div class="glass contact-box" onclick="location.href='mailto:ignite.self18@gmail.com'">
+        <strong>Contact Us</strong>
+      </div>
+      <div class="glass contact-box" onclick="location.href='https://www.instagram.com/ignitemedia0'">
+        <strong>Follow Us</strong><br>@ignitemedia0
       </div>
     </div>
-  </section>
 
-  <section>
-    <div class="container">
-      <h2>What is Ignite Media</h2>
-      <p>
-        Ignite Media is an independent, solo-operated digital media platform
-        managing and building multiple social content properties.
+    <div class="glass founder">
+      <img src="https://via.placeholder.com/150" alt="Founder">
+      <strong>Founder, Ignite Media</strong>
+      <p style="margin-top:12px;color:var(--muted);">
+        Solo creator building faceless media systems and scalable attention platforms.
       </p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="platforms">
-    <div class="container">
-      <h2>Platforms Operated</h2>
-      <div class="grid">
-        <div class="glass"><h3>Politics / News / Motivation</h3><p>Instagram · ~20K followers</p></div>
-        <div class="glass"><h3>Finance News</h3><p>Instagram · ~2K average views</p></div>
-        <div class="glass"><h3>Cricket / Sports</h3><p>Instagram · ~2K average views</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container glass">
-      <h2>Founder</h2>
-      <p>Founder & Operator, Ignite Media. Solo creator working on content systems and platform growth.</p>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container">
-      <h2>Connect</h2>
-      <p>Email: contact@ignitemedia.example<br>Instagram: @ignitemedia</p>
-    </div>
-  </section>
-
-  <footer>
-    © 2026 Ignite Media · Independent Digital Platform
-  </footer>
+<footer>
+  © 2026 Ignite Media · Independent Digital Platform
+</footer>
 
 </body>
 </html>
